@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Social Bull Web Application">
+  <meta name="author" content="OtisPS">
+  <title>Social Bull : Login to app</title>
+  <style>
+    body {
+      background-color: #172808;
+      color: #ffffff;
+    }
+    .container {
+      background-color: #2e5b01;
+      width: fit-content;
+      text-align: center;
+      padding: 20%;
+      margin: auto;
+    }
+    .btn {
+      width: 150px;
+      height: 50px;
+      background-color: #ddf3cb;
+      border: #0d1c00 2px solid;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <form class="form-signin" method="post" action="/login">
+    <h2 class="form-signin-heading">Please log in to access feed.</h2>
+    <p>
+      <label for="username" class="form-label">Username</label>
+      <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+    </p>
+    <p>
+      <label for="password" class="form-label">Password</label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+    </p>
+    <p>
+      <label for="remember-me" class="form-label">Remember Me</label>
+      <input type="checkbox" id="remember-me" name="remember-me" class="form-control">
+    </p>
+    <button class="btn" type="submit">Sign in</button>
+  </form>
+</div>
+</body>
+</html>
