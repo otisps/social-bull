@@ -1,5 +1,6 @@
 package com.otisps.socialbull.feed;
 
+//@Entity
 public class FeedPost {
 
     private final Integer id;
@@ -15,13 +16,19 @@ public class FeedPost {
         this.message = message;
     }
 
-    @Override
-    public String toString() {
-        return "FeedPost{" +
-                "id=" + id +
-                ", authorId=" + authorId +
-                ", authorGivenName='" + authorGivenName + '\'' +
-                ", message='" + message + '\'' +
-                '}';
+    public Integer getId() {
+        return id;
+    }
+
+    public Integer getAuthorId() {
+        return authorId;
+    }
+
+    public String getAuthorGivenName() {
+        return authorGivenName;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }

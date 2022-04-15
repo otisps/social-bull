@@ -9,9 +9,32 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/feed")
 public class FeedPostController {
 
-    @GetMapping("{postId}")
-    public String getFeedPostById(@PathVariable("postId") Integer postId){
-        // TODO: Get
-        return new FeedPost(1, 1, "Otis Partington", "Hello World'").toString();
+    private final FeedPostService feedPostService;
+
+    public FeedPostController(FeedPostService feedPostService) {
+        this.feedPostService = feedPostService;
     }
+    // Read
+    /**
+     *  GET Requests for feed posts by their id.
+     * @param postId id of post you want
+     * @return message
+     */
+    @GetMapping("{postId}")
+    public FeedPost getFeedPostById(@PathVariable("postId") Integer postId) {
+        return FeedPostService.getFeedPostList().get(postId);
+    }
+
+
+
+    @GetMapping
+    public Iterable<FeedPost> getAllFeedPosts(){
+        return FeedPostService.getFeedPostList();
+    }
+
+    // TODO: Create Post
+
+    // TODO: Update Post
+
+    // TODO: Delete Post
 }
