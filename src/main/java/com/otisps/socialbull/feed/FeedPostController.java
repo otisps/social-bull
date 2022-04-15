@@ -8,13 +8,10 @@ import org.springframework.web.server.ResponseStatusException;
 @RequestMapping("/api/v1/feed")
 public class FeedPostController {
 
-
     @GetMapping("{postId}")
     public FeedPost getFeedPostById(@PathVariable("postId") Integer postId) {
         return FeedPostService.getFeedPostList().get(postId);
     }
-
-
 
     @GetMapping
     public Iterable<FeedPost> getAllFeedPosts(){
