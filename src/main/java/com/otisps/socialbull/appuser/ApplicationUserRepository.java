@@ -2,10 +2,9 @@ package com.otisps.socialbull.appuser;
 
 import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
+import java.util.Optional;
 
 public interface ApplicationUserRepository extends CrudRepository<ApplicationUser, Long> {
-
-    List<ApplicationUser> findApplicationUserByUsername(String username);
+    Optional<ApplicationUser> findApplicationUserByUsername(String username);
 
 }

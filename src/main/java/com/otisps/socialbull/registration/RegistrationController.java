@@ -1,9 +1,10 @@
 package com.otisps.socialbull.registration;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 @RestController
-@RequestMapping(path="/register")
+@RequestMapping(path="/api/v1/register")
 public class RegistrationController {
     private final RegistrationService registrationService;
 
@@ -12,7 +13,8 @@ public class RegistrationController {
     }
 
     @PostMapping
-    public String register(@ModelAttribute RegistrationRequest registrationRequest){
-        return registrationService.register(registrationRequest);
+    public RedirectView register(@ModelAttribute RegistrationRequest registrationRequest){
+        registrationService.register(registrationRequest);
+        return new RedirectView("/login");
     }
 }
