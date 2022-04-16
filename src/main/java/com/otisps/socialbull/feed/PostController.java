@@ -7,7 +7,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/post")
+@RequestMapping("/api/v1/feed")
 public class PostController {
     private final PostService postService;
 
@@ -21,13 +21,20 @@ public class PostController {
     }
 
     @PostMapping
-    public Post postToFeed(@RequestBody IncomingPost post){
+    public Post postToFeed(@ModelAttribute IncomingPost post){
+        if(post.getMessage() == null){
+            return null;
+        }
+        if(post.getAuthor() == null) {
+            return null;
+        }
+
         Post postToPost = new Post(post.getMessage(), post.getAuthor());
         return this.postService.postToFeed(postToPost);
     }
 
     @PutMapping("{postId}")
-    public Post updatePostById(@PathVariable("postId") Long postId, @RequestBody IncomingPost update) throws ChangeSetPersister.NotFoundException {
+    public Post updatePostById(@PathVariable("postId") Long postId, @ModelAttribute IncomingPost update) throws ChangeSetPersister.NotFoundException {
 
         Post updateThisPost = this.postService.deletePostById(postId);
         Post postToSave;
