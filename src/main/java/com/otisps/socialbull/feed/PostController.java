@@ -29,6 +29,7 @@ public class PostController {
             return null;
         }
 
+
         Post postToPost = new Post(post.getMessage(), post.getAuthor());
         return this.postService.postToFeed(postToPost);
     }
