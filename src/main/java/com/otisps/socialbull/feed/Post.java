@@ -18,7 +18,6 @@ public class Post {
         this.author = author;
     }
     public Post() {
-
     }
 
     public Long getId() {

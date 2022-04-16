@@ -2,9 +2,6 @@ package com.otisps.socialbull.feed;
 
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpClientErrorException;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/feed")
