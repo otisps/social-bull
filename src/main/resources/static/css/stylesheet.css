@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,900;1,600&display=swap');
+
+body {
+    background-color: #7c5c5c;
+    color: #000000;
+    font-family: 'Hubballi', sans-serif;
+
+}
+h1 {
+    font-weight: 900;
+}
+.container {
+    background-color: #e8a8a8;
+    width: fit-content;
+    text-align: center;
+    padding: 20%;
+    margin: auto;
+}
+.form-box {
+    padding: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    background-color: #ddf3cb;
+    border: #6e4d3c 2px solid;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: coral;
+}
+
+.form-input {
+    padding: 5px;
+    margin: 10px;
+}
