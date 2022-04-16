@@ -36,6 +36,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                     .defaultSuccessUrl("/landing", true)
                     .passwordParameter("password")
                     .usernameParameter("username");
+                // TODO : Login failed!
                 // TODO : Remember Me!
                 // TODO : Logout!
     }

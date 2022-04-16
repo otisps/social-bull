@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 @RestController
-@RequestMapping(path="/api/v1/register")
+@RequestMapping(path="/register")
 public class RegistrationController {
     private final RegistrationService registrationService;
 
