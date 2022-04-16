@@ -17,4 +17,9 @@ public class TemplateController {
     public String getRegisterView() {
         return "register";
     }
+
+    @GetMapping("landing")
+    public String getLandingView() {
+        return "landing";
+    }
 }
